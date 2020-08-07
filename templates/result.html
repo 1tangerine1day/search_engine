@@ -1,0 +1,69 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'search/css/outcome_page.css' %}">
+
+<form class="searchform cf" action="/result/" method="post">
+    <div class="search-content">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class = "search_bar" name="search_word" type="text" placeholder="looking for?">
+    <br>
+    <div class = "search_type">
+      <label><input type="checkbox" value="search_wiki" name="search_type"> wiki</label><br>
+      <label><input type="checkbox" value="search_w2v" name="search_type"> w2v</input></label><br>
+      <label><input type="checkbox" value="search_mesh" name="search_type"> mesh</input></label><br>
+    </div>
+    <br>
+    <button type="submit" class="search-btn">Search</button>
+    <button type="button" class="home-btn" onclick="location.href='/'">Home</button>
+    </div>
+  </form>
+
+{% if contxt %}
+<div class="search-list" >
+    <ol class="custom-counter">
+        <li style="margin-left:0%">
+            <p>
+            search : {{ search_lemma }}<br><br>
+
+            {% if relateMesh %}
+            mesh : {{ mesh_word }}<br>
+            related Mesh words : {{ relateMesh }}<br><br>
+            {% endif %}
+
+            {% if w2v %}
+            w2v : {{w2v}}<br><br>
+            {% endif %}
+
+            {% if wiki %}
+            wiki : {{wiki}}<br><br>
+            {% endif %}
+
+            query : {{ex_search_lemma}}<br>
+            </p>
+        </li>
+        <p> ----------------------------------------------------------------------------------------------------------------------<p>
+    {% for i,j in contxt %}
+        <li>{{ i }}</li>
+        <p>{{ j }}</p>
+        <p> ----------------------------------------------------------------------------------------------------------------------<p>
+    {% endfor %}
+    </ol>
+</div>
+{% endif %}
+
+{% if not_found %}
+<div class="bottom-contant">
+    <h2>{{ not_found }}</h2>
+    {{search_lemma}}<br>
+        {% for i,j in sim %}
+            {{i}} : {{j}}<br>
+        {% endfor %}
+</div>
+{% endif %}
+
+
+
+<!-- { extends  'search_page.html' }
+{% block outcome %}
+{% endblock outcome %} -->
+

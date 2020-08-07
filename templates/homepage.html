@@ -1,0 +1,46 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'search/css/search_page.css' %}">
+<script type="text/javascript" src="{% static 'search/js/search_page.js' %}"></script>
+<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<form class="searchform cf" action="/result/" method="post">
+  <div class="search-content">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input name="search_word" type="text" placeholder="looking for?">
+  <br>
+  <div class = "search_type">
+    <div class = "search_type">
+      <label><input type="checkbox" value="search_wiki" name="search_type"> wiki</label><br>
+      <label><input type="checkbox" value="search_w2v" name="search_type"> w2v</input></label><br>
+      <label><input type="checkbox" value="search_mesh" name="search_type"> mesh</input></label><br>
+    </div>
+  </div>
+  <br>
+  <button type="submit">Search</button>
+  </div>
+</form>
+
+<form class="uploadform cf" enctype="multipart/form-data" action="/upload/" method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<div class="file-upload">
+  <div class="image-upload-wrap">
+    <input class="file-upload-input" type='file' onchange="readURL(this);" name="test_file"/>
+    <div class="drag-text">
+      <h3>Drag a file to here</h3>
+    </div>
+  </div>
+  <div class="file-upload-content">
+      <button type="button" onclick="removeUpload()" class="remove-image">Remove </button>
+      <button class="upload-image" type="submit" value="upload">Upload</button>
+  </div>
+</div>
+</form>
+
+<div style="text-align:center">
+    <a href="/update"> update model </a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="/crawler"> crawler </a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="/upload_all"> upload all </a>
+</div>
+
+
+

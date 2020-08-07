@@ -1,0 +1,37 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'search/css/detail_page.css' %}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+
+<div class= "main-contant">
+    
+    <h1> lemma frequence </h1>
+    <div class="table-content">
+
+        <!-- <h1> lemma frequence </h1> -->
+        <table class="table2" width="300" border="1" style = "float: left">
+            <tr>
+                <td>lemma</td>
+                <td>pos</td>
+
+                <td>freq</td>
+                <td>idf</td>
+
+                <td>sf({{all_sen_num}})</td>
+                <td>file({{ all_file_num }})</td>
+            </tr>
+            {% for i,j,k,l,m,n in show_lemma %}
+                <tr>
+                    <td>{{i}}</td>
+                    <td>{{j}}</td>
+                    <td>{{k}}</td>
+                    <td>{{l}}</td>
+                    <td>{{m}}</td>
+                    <td>{{n}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</div>
+

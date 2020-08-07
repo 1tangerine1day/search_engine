@@ -1,0 +1,60 @@
+/*--------------------------------------------------------------
+1.0 - BASE SITE STYLES
+--------------------------------------------------------------*/
+*,*:after,*:before {
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+  }
+  
+  .cf:before,
+  .cf:after {
+      content:"";
+      display:table;
+  }
+  .cf:after {
+      clear:both;
+  }
+  
+  body {
+    background: #fff;
+    color: #000;
+    font:12px/18px 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  }
+  a,a:visited {
+    color:#000
+  }
+
+/*--------------------------------------------------------------
+1.0 - BASE SITE STYLES
+--------------------------------------------------------------*/
+
+  .demo {
+    margin: 0 auto;
+    padding-top: 64px;
+    max-width: 750px;
+    width: 94%;
+  }
+  
+  .demo h1 {
+    margin-top: 0;
+  }
+  
+  /**
+   * Footer Styles
+   */
+  
+  .footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+  }
+
+  #myFirstChart,#tfidfChart{
+    background-color: #fff;
+    border-radius: 6px;
+  }

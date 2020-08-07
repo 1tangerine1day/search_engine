@@ -1,0 +1,33 @@
+/*--------------------------------------------------------------
+  2.0 - image 
+  --------------------------------------------------------------*/
+
+  body {
+    background: #fff;
+    color: #000;
+    font:12px/18px 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  }
+
+  .table-contant {
+  
+  }
+  .table2 {
+    margin-left: 30
+  }
+
+
+  .main-contant {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30;
+    width: 80%;
+    align-content: center;
+  }
+
+  #myFirstChart, #idfChart {
+    background-color: #fff;
+    border-radius: 6px;
+  }
+
+

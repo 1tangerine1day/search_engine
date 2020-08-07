@@ -1,0 +1,61 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'search/css/file_page.css' %}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+    <div class="demo">
+        <h1>{{name}}</h1>
+        <p>{{ title }}</p>
+        <p>{{text}}</p>
+        <h2>lemma</h2>
+        <p>{{text_lemma}}</p>
+        <!-- <h2>char_num</h2>
+        <p>{{char_num}}</p>
+        <h2>word_num</h2>
+        <p>{{word_num}}</p>
+        <h2>sentence_num</h2>
+        <p>{{sentence_num}}</p> -->
+
+        <h2>eof</h2>
+        {% for i in eof %}
+            {{i}}<br><br>
+        {% endfor %}
+
+        <h2>pos</h2>
+        {% for i in pos %}
+            {{i}}<br><br>
+        {% endfor %}
+
+        <!-- <h2>lemma frequency</h2>
+        <table width="400" border="1">
+            <tr>
+                <td>lemma</td>
+                <td>pos</td>
+                <td>freq</td>
+                <td>tf</td>
+                <td>sf</td>
+                <td>idf</td>
+                <td>tf-idf</td>
+                <td>tf-sf-idf</td>
+                
+            </tr>
+        {% for i,j,k,l,m,n,o,p in show_lemma %}
+            <tr>
+            <td>{{i}}</td>
+            <td>{{j}}</td>
+            <td>{{k}}</td>
+            <td>{{l}}</td>
+            <td>{{m}}</td>
+            <td>{{n}}</td>
+            <td>{{o}}</td>
+            <td>{{p}}</td>
+            </tr>
+        {% endfor %}
+        </table> -->
+    </div>
+
+    
+
+
+
+
+
