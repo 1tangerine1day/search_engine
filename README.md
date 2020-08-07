@@ -1,4 +1,4 @@
-# search_engine
+# Search Engine
 * word segment/lemmatization
 * end of sentence
 * POS tag
@@ -8,4 +8,4 @@
 
 presentation : https://drive.google.com/file/d/1AYYc8Nb6mFWGNtmYXVDPJ-kWRS-PXGqG/view
 
-demo : 
+demo : https://www.youtube.com/watch?v=8fGy0fB-V3s
