@@ -1,6 +1,6 @@
 # Search Engine
-[!image](https://github.com/1tangerine1day/search_engine/blob/master/gif/show.gif)
-
+!image[](https://github.com/1tangerine1day/search_engine/blob/master/gif/show.gif)
+* django
 * word segment/lemmatization
 * end of sentence
 * POS tag
