@@ -12,4 +12,4 @@ presentation : https://drive.google.com/file/d/1AYYc8Nb6mFWGNtmYXVDPJ-kWRS-PXGqG
 
 demo : https://www.youtube.com/watch?v=8fGy0fB-V3s
 
-[![Watch the video](https://www.youtube.com/watch?v=8fGy0fB-V3s)
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
