@@ -1,4 +1,6 @@
 # Search Engine
+[!image](https://github.com/1tangerine1day/search_engine/blob/master/gif/show.gif)
+
 * word segment/lemmatization
 * end of sentence
 * POS tag
