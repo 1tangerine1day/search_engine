@@ -10,4 +10,4 @@
 
 presentation : https://drive.google.com/file/d/1AYYc8Nb6mFWGNtmYXVDPJ-kWRS-PXGqG/view
 
-demo : https://youtu.be/LgpTwaFgS3Y
+full demo : https://youtu.be/LgpTwaFgS3Y
