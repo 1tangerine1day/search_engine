@@ -4,9 +4,11 @@
 * word segment/lemmatization
 * end of sentence
 * POS tag
-* Topic modeling
 * LSI(Latent Semantic Indexing) model 
+* Topic modeling
 * document simularity
+* automatic keyword
+* automatic summarization
 
 presentation : https://drive.google.com/file/d/1AYYc8Nb6mFWGNtmYXVDPJ-kWRS-PXGqG/view
 
