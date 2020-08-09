@@ -28,6 +28,8 @@ import string
 
 import threading
 
+from summa import summarizer, keywords
+
 lstm_model = LSTMTagger(10,10,19,2)
 lstm_model = torch.load('./polls/model_eof.pkl',map_location='cpu')
 word_to_ix = {'SPACE': 0, 'ADP':1, 'ADV':2, 'AUX':3, 'CONJ':4, 'CCONJ':5, 'DET':6, 'INTJ':7, 'NUM':8, 'PART':9, 'PRON':10,'PROPN':11, 'PUNCT':12, 'SCONJ':13, 'SYM':14, 'VERB':15, 'NOUN':16, 'X':17, 'ADJ': 18 }
@@ -209,7 +211,9 @@ def result(request):
                 return_find = []
                 for s in sims[:10]:
                     index = int(s[0])
-                    temp =  "相似度：" + str(s[1]) + "<br>" + "文章標題：" + str(doc_title[index]) + "<br>" + "文章內容：" + "<br>&nbsp&nbsp&nbsp&nbsp"+ str(doc_text[index])
+                    summ = summarizer.summarize(doc_title[index]+doc_text[index], words=50)
+                    kws = keywords.keywords(doc_text[index], split=True)
+                    temp =  "相似度：" + str(s[1]) + "<br> <br> " + "文章標題：<br>" + str(doc_title[index]) + "<br> <br>" + "關鍵字：<br>" + str(kws) + "<br> <br>" + "文章摘要：<br>" + "&nbsp&nbsp&nbsp&nbsp"+ str(summ)
                     return_find.append((doc_name[index],mark_safe(temp)))
    
                 return render(request,'result.html',{
