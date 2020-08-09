@@ -1,5 +1,6 @@
 # Search Engine
 demo : https://youtu.be/LgpTwaFgS3Y
+
 ![image](https://github.com/1tangerine1day/search_engine/blob/master/gif/show.gif)
 * django
 * word segment/lemmatization
